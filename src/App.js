@@ -49,7 +49,7 @@ class App extends Component {
           });
         } else if (query === 'rose flowers') {
           this.setState({
-            tulipFlowrsResults: responseData.photos.photo,
+            tulipFlowersResults: responseData.photos.photo,
             loading: false
           });
         } else if (query === 'tulip flowers') {
