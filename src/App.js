@@ -1,4 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Home</h1>
+      </div>
+    )
+  }
+}
+export default App
+
 import {
   BrowserRouter,
   Route,
@@ -12,6 +23,7 @@ import apiKey from './config.js';
 import HeaderMenu from './components/HeaderMenu';
 import Gallery from './components/Gallery';
 import NotFound from './components/NotFound';
+
 // properties of component
 class App extends Component {
   state = {

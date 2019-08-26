@@ -4,6 +4,15 @@ body {
   color: #3f4850;
 }
 
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: sans-serif;
+  }
+  .active{
+     color:red;
+  }
+
 h2 {
   font-size: 2em;
   margin: 52px 0 40px;
