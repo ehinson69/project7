@@ -43,5 +43,4 @@ class Search extends Component {
     }
 };
 
-// exports withRouter
 export default withRouter(Search);

@@ -27,4 +27,4 @@ class Users extends React.Component {
     )
   }
 }
-export default Users
+export default Users;
