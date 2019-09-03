@@ -1,26 +1,34 @@
-//imort components from image and Noresults
+//Imort components from Image and NoResults
 import React from "react";
 import Image from "./Image";
 import NoResults from "./NoResults";
+import Nav from "./Nav";
 
-const Gallery = props => {
-    const results = props.data;
-    let pics;
+const Gallery = ({ pictures }) => {
+  // const pics = pictures;
+  // let pictures;
 
-    //if array is greater than 0 check for the next pic
-    if (results.length > 0) {
-        pics = results.map(pic => <Image url={'https://farm${picture.farm}.staticflickr.com/${picture.server}/${picture.id}_${picture.secret}.jpg'} key={picture.id}/>;
-    } else {
-        pics = <NoResults />
-    }
+  //If array is greater than 0 check for the next picture
+  if (pictures.length === 0) {
+    return <NoResults />;
+  }
 
-    //use return to render images
-    return (
-        <div className="photo-container">
-           <h2>{props.match.params.name}</h2>
-           <ul>{pics}</ul>
-        </div>
-    );
+  //Use return to render images
+  return (
+    <div className="photo-container">
+      <h2>Results</h2>
+      <ul>
+        {pictures.map(picture => (
+          <li>
+            <img
+              src={`https://farm${picture.farm}.staticflickr.com/${picture.server}/${picture.id}_${picture.secret}.jpg`}
+              key={picture}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Gallery;
