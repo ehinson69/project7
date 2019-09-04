@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-//linking navigation tabs
+
 class Nav extends React.Component {
   link = e => {
     this.props.onClick(e.target.innerText);

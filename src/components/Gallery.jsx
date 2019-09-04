@@ -1,8 +1,8 @@
 //Imort components from Image and NoResults
 import React from "react";
-import Image from "./Image";
+// import Image from "./Image";
 import NoResults from "./NoResults";
-import Nav from "./Nav";
+// import Nav from "./Nav";
 
 const Gallery = ({ pictures }) => {
   // const pics = pictures;
@@ -19,10 +19,10 @@ const Gallery = ({ pictures }) => {
       <h2>Results</h2>
       <ul>
         {pictures.map(picture => (
-          <li>
+          <li key={picture.id}>
             <img
               src={`https://farm${picture.farm}.staticflickr.com/${picture.server}/${picture.id}_${picture.secret}.jpg`}
-              key={picture}
+              alt="flickr img"
             />
           </li>
         ))}

@@ -7,7 +7,7 @@ import Search from "./components/Search";
 import Gallery from "./components/Gallery";
 import NotFound from "./components/NotFound";
 
-class App extends React.Component {
+class App extends Component {
   state = {
     loading: true,
     searchTerm: "",
