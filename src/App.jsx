@@ -28,6 +28,7 @@ class App extends Component {
     this.setState({
       loading: true
     });
+
     //fetch url
     fetch(
       `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&sort=relevance&format=json&nojsoncallback=1`
@@ -84,6 +85,7 @@ class App extends Component {
                 ) : (
                   <Gallery
                     pictures={this.state.hairstylesResults}
+                    title={"Hairstyles"}
                     query="hairstyles"
                   />
                 )
@@ -98,6 +100,7 @@ class App extends Component {
                 ) : (
                   <Gallery
                     pictures={this.state.gymnasticsResults}
+                    title={"Gymnastics"}
                     query="gymnastics"
                   />
                 )
@@ -112,6 +115,7 @@ class App extends Component {
                 ) : (
                   <Gallery
                     pictures={this.state.cruisesResults}
+                    title={"Cruises"}
                     query="cruises"
                   />
                 )
@@ -127,6 +131,7 @@ class App extends Component {
                 ) : (
                   <Gallery
                     pictures={this.state.results}
+                    title={"Results"}
                     query={this.state.searchTerm}
                   />
                 )

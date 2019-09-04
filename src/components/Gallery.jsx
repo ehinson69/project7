@@ -4,10 +4,7 @@ import React from "react";
 import NoResults from "./NoResults";
 // import Nav from "./Nav";
 
-const Gallery = ({ pictures }) => {
-  // const pics = pictures;
-  // let pictures;
-
+const Gallery = ({ pictures, title }) => {
   //If array is greater than 0 check for the next picture
   if (pictures.length === 0) {
     return <NoResults />;
@@ -16,7 +13,8 @@ const Gallery = ({ pictures }) => {
   //Use return to render images
   return (
     <div className="photo-container">
-      <h2>Results</h2>
+      <h2>{title}</h2>
+      {/**Results*/}
       <ul>
         {pictures.map(picture => (
           <li key={picture.id}>
