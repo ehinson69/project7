@@ -5,7 +5,7 @@ import NoResults from "./NoResults";
 // import Nav from "./Nav";
 
 const Gallery = ({ pictures, title }) => {
-  //If array is greater than 0 check for the next picture
+  //If array is equal to 0 check for the next picture
   if (pictures.length === 0) {
     return <NoResults />;
   }
